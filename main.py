@@ -1,7 +1,8 @@
+## Consumo dos dados da API de dados abertos do Recife
+
 from flask import Flask, request
 from flask_restful import Resource, Api
 from sqlalchemy import create_engine
-from json import dumps
 
 e = create_engine('sqlite:///museus.db')
 
