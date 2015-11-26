@@ -27,7 +27,7 @@ class Pontos_Turisticos_Meta(Resource):
             for registro in child.iter('registro'):
                 for attr in registro.attrib:
                     schema = ['id', 'nome', 'codigocategoria', 'latitude', 'longitude', 'altitude', 'categoria', 'descricao', 'idioma', 'logradouro', 'municipio']
-                    data.append({ schema[int(attr[-1])+1] :  registro.get(attr)})
+                    data.append({ schema[int(attr[-1])-1] :  registro.get(attr)})
         return { 'data' : data }
 
 
