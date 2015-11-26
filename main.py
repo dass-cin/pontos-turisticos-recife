@@ -33,11 +33,6 @@ class Pontos_Turisticos_Meta(Resource):
                 data.append(item)
         return { 'data' : data }
 
-
-        #c.execute('insert into pontos_turisticos_normalizado VALUES (?,?,?,?,?,?,?,?,?,?,?) ', data)
-        #c.commit()
-        #conn.close()
-
 api.add_resource(Museus_Meta, '/museus/')
 api.add_resource(Pontos_Turisticos_Meta, '/pontosTuristicos/')
 
@@ -58,9 +53,6 @@ class Importacao(object):
             longitude = None
             latitude = None
             if data['codigocategoria'] != '': codigocategoria = int(data['codigocategoria'])
-            if data['altitude'] != '': altitude = (data['altitude'])
-            if data['latitude'] != '': latitude = (data['latitude'])
-            if data['longitude'] != '': longitude = (data['longitude'])
             conn.execute('INSERT INTO pontos_turisticos_normal VALUES (:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11)', id, data['nome'], codigocategoria, altitude, data['categoria'], data['descricao'], data['idioma'], data['logradouro'], data['municipio'], latitude, longitude )
 
 if (not app.debug):
