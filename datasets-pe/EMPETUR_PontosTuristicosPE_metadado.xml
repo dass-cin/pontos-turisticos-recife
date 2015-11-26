@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arquivo referencia="EMPETUR_PontosTuristicosPE_dado.xml">
+  <cabecalho>
+    <descricao resumo="Uma exposição sucinta do conteúdo do recurso." />
+    <criador autor="Entidade (pessoa ou organização) responsável pelo conteúdo intelectual do recurso." produtor="Nome da entidade (pessoa ou organização) responsável pela produção e manutenção dos documentos arquivísticos." />
+    <sigla autor="A sigla da entidade (pessoa ou organização) criadora e autora do recurso." produtor="A sigla da entidade (pessoa ou organização) criadora e produtora do recurso." />
+    <assuntos categoria="Permite identificar o assunto principal do recurso apontado." />
+    <titulo principal="Palavra, frase ou grupo de caracteres que nomeia um recurso e que pode corresponder à sua denominação oficial ou legal, ou ainda ao nome que aparece de forma evidente ou explícita." />
+    <fonte origem="Identificação do recurso que deu origem ao recurso atual." />
+    <data criacao="Data da criação ou produção do recurso." publicacao="Data da publicação do recurso." />
+    <abrangencia temporal="Extensão temporal do recurso. Um período no formato data-inicial/data-final (aaaa-mm-dd/aaaa-mm-dd) ou apenas o ano de referencia (aaaa)." />
+    <periodicidade_atualizacao frequencia="A frequência de atualização do recurso. Ex: 1; 15. Um número inteiro e positivo, ou vazio, caso não haja atualização." unidade="A repetição da atualização do recurso: hora, dia, mês, ano. Vazio, caso não haja atualização alguma." />
+  </cabecalho>
+  <corpo>
+    <atributos>
+      <atributo nome="id" descricao="O identificador de cada registro da base de dados." tipo="Numérico Inteiro Pequeno" tamanho="6" />
+      <atributo nome="nome" descricao="O nome do Item de Interesse." tipo="Texto Pequeno" tamanho="75" />
+      <atributo nome="codigocategoria" descricao="O código da categoria relacionada ao Item de Interesse em questão." tipo="Numérico Inteiro Pequeno" tamanho="5" />
+      <atributo nome="latitide" descricao="A coordenada geográfica (Latitude) expressa sobre a superfície terrestre e no formato de graus decimais.  Há valores positivos (Norte e Leste) e negativos (Sul e Oeste). Os valores negativos são acrescidos do símbolo -." tipo="Numérico Geográfico Decimal" tamanho="" />
+      <atributo nome="longitude" descricao="A coordenada geográfica (Longitude) expressa sobre a superfície terrestre e no formato de graus decimais.  Há valores positivos (Norte e Leste) e negativos (Sul e Oeste). Os valores negativos são acrescidos do símbolo -." tipo="Numérico Geográfico Decimal" tamanho="" />
+      <atributo nome="altitude" descricao="Representa a altitude do Item de Interesse." tipo="Texto Grande" tamanho="" />
+      <atributo nome="categoria" descricao="A categoria a qual o Item de Interesse está associado." tipo="Texto Pequeno" tamanho="200" />
+      <atributo nome="descricao" descricao="Texto que descreve detalhadamente o Item de Interesse." tipo="Texto Grande" tamanho="" />
+      <atributo nome="idioma" descricao="Informa o idioma do conteúdo do campo descrição deste mesmo arquivo. Para o conteúdo em português, o campo fica vazio." tipo="Texto Pequeno" tamanho="200" />
+      <atributo nome="nomelogradouro" descricao="O logradouro (rua/avenida/etc) do Item de Interesse.  Identifica o endereço completo do Item de Interesse." tipo="Texto Grande" tamanho="" />
+      <atributo nome="nomemunicipio" descricao="O município do Item de Interesse." tipo="Texto Pequeno" tamanho="75" />
+    </atributos>
+  </corpo>
+</arquivo>
