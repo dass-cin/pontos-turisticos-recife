@@ -47,13 +47,9 @@ class Importacao(object):
         dataset = json.loads(json.dumps(parsed))
 
         for data in dataset:
-            id = int(data['id']) if data['id'] is not None else None
             codigocategoria = None
-            altitude = None
-            longitude = None
-            latitude = None
             if data['codigocategoria'] != '': codigocategoria = int(data['codigocategoria'])
-            conn.execute('INSERT INTO pontos_turisticos_normal VALUES (:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11)', id, data['nome'], codigocategoria, altitude, data['categoria'], data['descricao'], data['idioma'], data['logradouro'], data['municipio'], latitude, longitude )
+            conn.execute('INSERT INTO pontos_turisticos_normal VALUES (:1,:2,:3,:4,:5,:6,:7,:8,:9,:10,:11)', data['id'], data['nome'], codigocategoria, data['altitude'], data['categoria'], data['descricao'], data['idioma'], data['logradouro'], data['municipio'], data['latitude'], data['longitude'])
 
 if (not app.debug):
     import logging
@@ -63,6 +59,6 @@ if (not app.debug):
     app.logger.addHandler(file_handler)
 
 if __name__ == '__main__':
-    #i = Importacao()
-    #i.importPontos()
-    app.run()
+    i = Importacao()
+    i.importPontos()
+    #app.run()
